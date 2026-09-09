@@ -1,0 +1,1 @@
+using NovaHarvest.Core.Models; namespace NovaHarvest.Core.World; public sealed class FarmPlotObject:WorldObject { public FarmPlot Plot{get;} public FarmPlotObject(string id,int x,int y,int plotId):base(id,"Canteiro",WorldObjectType.FarmPlot,x,y){Plot=new FarmPlot(plotId);} }

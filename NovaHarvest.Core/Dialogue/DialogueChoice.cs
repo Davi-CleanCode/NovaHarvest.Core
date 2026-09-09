@@ -1,0 +1,1 @@
+namespace NovaHarvest.Core.Dialogue;public sealed class DialogueChoice {public string Id{get;}public string Text{get;}public string NextNodeId{get;}public int FriendshipChange{get;}public DialogueChoice(string id,string text,string nextNodeId,int friendshipChange=0){Id=id;Text=text;NextNodeId=nextNodeId;FriendshipChange=friendshipChange;}}

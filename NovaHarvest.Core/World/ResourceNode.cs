@@ -1,0 +1,2 @@
+namespace NovaHarvest.Core.World; public sealed class ResourceNode:WorldObject { public string ResourceId{get;} public int Amount{get;private set;} public bool IsDepleted=>Amount<=0;
+public ResourceNode(string id,string name,WorldObjectType type,string resourceId,int amount,int x,int y):base(id,name,type,x,y){ResourceId=resourceId;Amount=Math.Max(0,amount);} public int Gather(int amount){if(amount<=0||IsDepleted)return 0;var n=Math.Min(amount,Amount);Amount-=n;return n;} }

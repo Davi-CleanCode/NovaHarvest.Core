@@ -1,0 +1,1 @@
+namespace NovaHarvest.Core.Player; public sealed class PlayerState { public int Health{get;private set;}=100; public int MaxHealth{get;}=100; public bool IsAlive=>Health>0; public void Damage(int amount){if(amount>0)Health=Math.Max(0,Health-amount);} public void Heal(int amount){if(amount>0)Health=Math.Min(MaxHealth,Health+amount);} }
