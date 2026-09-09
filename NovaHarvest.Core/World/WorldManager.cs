@@ -1,4 +1,10 @@
-namespace NovaHarvest.Core.World; public sealed class WorldManager { readonly Dictionary<string,WorldObject> _objects=new(); public IReadOnlyCollection<WorldObject> Objects=>_objects.Values; public int ObjectCount=>_objects.Count;
-public bool Add(WorldObject o){if(o is null||string.IsNullOrWhiteSpace(o.Id)||_objects.ContainsKey(o.Id))return false;_objects.Add(o.Id,o);return true;} public WorldObject? Find(string id)=>_objects.TryGetValue(id,out var o)?o:null;
-public IReadOnlyList<WorldObject> GetByType(WorldObjectType t)=>_objects.Values.Where(x=>x.Type==t).ToList(); public IReadOnlyList<ResourceNode> GetResources()=>_objects.Values.OfType<ResourceNode>().Where(x=>!x.IsDepleted).ToList();
-public IReadOnlyList<WorldObject> GetNearby(int x,int y,int radius)=>radius<0?Array.Empty<WorldObject>():_objects.Values.Where(o=>Math.Abs(o.X-x)<=radius&&Math.Abs(o.Y-y)<=radius).ToList(); public bool HasObjectAt(int x,int y)=>_objects.Values.Any(o=>o.X==x&&o.Y==y); }
+namespace NovaHarvest.Core.World;
+
+public sealed class WorldManager
+{
+    readonly Dictionary<string, WorldObject> _objects = new(); public IReadOnlyCollection<WorldObject> Objects => _objects.Values; public int ObjectCount => _objects.Count;
+    public bool Add(WorldObject o) { if (o is null || string.IsNullOrWhiteSpace(o.Id) || _objects.ContainsKey(o.Id)) return false; _objects.Add(o.Id, o); return true; }
+    public WorldObject? Find(string id) => _objects.TryGetValue(id, out var o) ? o : null;
+    public IReadOnlyList<WorldObject> GetByType(WorldObjectType t) => _objects.Values.Where(x => x.Type == t).ToList(); public IReadOnlyList<ResourceNode> GetResources() => _objects.Values.OfType<ResourceNode>().Where(x => !x.IsDepleted).ToList();
+    public IReadOnlyList<WorldObject> GetNearby(int x, int y, int radius) => radius < 0 ? Array.Empty<WorldObject>() : _objects.Values.Where(o => Math.Abs(o.X - x) <= radius && Math.Abs(o.Y - y) <= radius).ToList(); public bool HasObjectAt(int x, int y) => _objects.Values.Any(o => o.X == x && o.Y == y);
+}

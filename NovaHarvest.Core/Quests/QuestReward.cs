@@ -1,1 +1,1 @@
-namespace NovaHarvest.Core.Quests; public sealed class QuestReward { public int Friendship{get;}public string? UnlockId{get;}public QuestReward(int friendship,string? unlockId=null){Friendship=friendship;UnlockId=unlockId;} }
+namespace NovaHarvest.Core.Quests; public sealed class QuestReward { public int Friendship { get; } public string? UnlockId { get; } public QuestReward(int friendship, string? unlockId = null) { Friendship = friendship; UnlockId = unlockId; } }

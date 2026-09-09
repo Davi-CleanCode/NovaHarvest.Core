@@ -1,1 +1,1 @@
-namespace NovaHarvest.Core.NPC; public sealed class NPCService { public string Id{get;}public string Name{get;}public string Description{get;} public NPCService(string id,string name,string description){Id=id;Name=name;Description=description;} }
+namespace NovaHarvest.Core.NPC; public sealed class NPCService { public string Id { get; } public string Name { get; } public string Description { get; } public NPCService(string id, string name, string description) { Id = id; Name = name; Description = description; } }

@@ -1,3 +1,11 @@
-namespace NovaHarvest.Core.World; public static class DemoWorld { public static WorldManager Create(){var w=new WorldManager();
-w.Add(new ResourceNode("tree_01","Árvore Alienígena",WorldObjectType.Tree,"alien_wood",5,4,6));w.Add(new ResourceNode("tree_02","Árvore Alienígena",WorldObjectType.Tree,"alien_wood",5,7,8));w.Add(new ResourceNode("rock_01","Rocha Alienígena",WorldObjectType.Rock,"stone",8,12,5));w.Add(new ResourceNode("crystal_01","Cristal Verde",WorldObjectType.Mineral,"green_crystal",3,15,4));
-w.Add(new WorldObject("alien_plant_01","Planta Luminescente",WorldObjectType.Plant,9,12));w.Add(new WorldObject("river_01","Rio",WorldObjectType.Water,20,10,false));w.Add(new WorldObject("farm_plot_01","Canteiro",WorldObjectType.FarmPlot,5,3));w.Add(new WorldObject("player_ship","Nave Destruída",WorldObjectType.Ship,2,2));w.Add(new WorldObject("campfire","Fogueira",WorldObjectType.Campfire,4,2));w.Add(new WorldObject("starter_chest","Baú da Nave",WorldObjectType.Chest,3,2));w.Add(new WorldObject("alien_ruins_01","Ruína Alienígena",WorldObjectType.Ruins,25,15));return w;} }
+namespace NovaHarvest.Core.World;
+
+public static class DemoWorld
+{
+    public static WorldManager Create()
+    {
+        var w = new WorldManager();
+        w.Add(new ResourceNode("tree_01", "Árvore Alienígena", WorldObjectType.Tree, "alien_wood", 5, 4, 6)); w.Add(new ResourceNode("tree_02", "Árvore Alienígena", WorldObjectType.Tree, "alien_wood", 5, 7, 8)); w.Add(new ResourceNode("rock_01", "Rocha Alienígena", WorldObjectType.Rock, "stone", 8, 12, 5)); w.Add(new ResourceNode("crystal_01", "Cristal Verde", WorldObjectType.Mineral, "green_crystal", 3, 15, 4));
+        w.Add(new WorldObject("alien_plant_01", "Planta Luminescente", WorldObjectType.Plant, 9, 12)); w.Add(new WorldObject("river_01", "Rio", WorldObjectType.Water, 20, 10, false)); w.Add(new WorldObject("farm_plot_01", "Canteiro", WorldObjectType.FarmPlot, 5, 3)); w.Add(new WorldObject("player_ship", "Nave Destruída", WorldObjectType.Ship, 2, 2)); w.Add(new WorldObject("campfire", "Fogueira", WorldObjectType.Campfire, 4, 2)); w.Add(new WorldObject("starter_chest", "Baú da Nave", WorldObjectType.Chest, 3, 2)); w.Add(new WorldObject("alien_ruins_01", "Ruína Alienígena", WorldObjectType.Ruins, 25, 15)); return w;
+    }
+}
